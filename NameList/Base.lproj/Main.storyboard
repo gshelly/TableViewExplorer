@@ -55,8 +55,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="namesTableView" destination="vJF-Ep-dB1" id="zv5-w3-Fvj"/>
+                        <outlet property="searchDisplayController" destination="A34-nR-lsY" id="AAH-EM-mBc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="A34-nR-lsY">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="U68-hz-VMm"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="tUy-Mr-oga"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="gLi-jy-QJd"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="ebc-XO-Caw"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
         </scene>
     </scenes>
