@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var alphabetizedName = [String: [String]]()
     var sortedKeys: [String]?
     var index = 0
+    var nameToPass: String?
     //By intializing the search view controller with nil, we tell the seach controller the we want to use the same view for displaying the result
     let searchViewController = UISearchController(searchResultsController: nil)
     var searchCheck = false
@@ -72,6 +73,12 @@ class ViewController: UIViewController {
         return result
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "dataSegue" {
+            let vc = segue.destination as! DetailsViewController
+            vc.passedName = nameToPass ?? ""
+        }
+    }
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
@@ -100,6 +107,14 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = name[indexPath.row]
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let selectedIndex =  tableView.indexPathForSelectedRow
+        let selectedCell = tableView.cellForRow(at: selectedIndex!)
+        
+        nameToPass = selectedCell?.textLabel?.text
+        performSegue(withIdentifier: "dataSegue", sender: self)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

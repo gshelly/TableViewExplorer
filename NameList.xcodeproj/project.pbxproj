@@ -13,6 +13,8 @@
 		AB57E95D20A72D820060A213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB57E95C20A72D820060A213 /* Assets.xcassets */; };
 		AB57E96020A72D820060A213 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB57E95E20A72D820060A213 /* LaunchScreen.storyboard */; };
 		AB57E96820A89C270060A213 /* names.json in Resources */ = {isa = PBXBuildFile; fileRef = AB57E96720A89C270060A213 /* names.json */; };
+		AB5F39A220B5E1C3004AE9AE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5F39A120B5E1C3004AE9AE /* DetailsViewController.swift */; };
+		AB5F39A420B5EDD1004AE9AE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5F39A320B5EDD1004AE9AE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AB57E95F20A72D820060A213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB57E96120A72D820060A213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB57E96720A89C270060A213 /* names.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = names.json; sourceTree = "<group>"; };
+		AB5F39A120B5E1C3004AE9AE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AB5F39A320B5EDD1004AE9AE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				AB57E95C20A72D820060A213 /* Assets.xcassets */,
 				AB57E95E20A72D820060A213 /* LaunchScreen.storyboard */,
 				AB57E96120A72D820060A213 /* Info.plist */,
+				AB5F39A120B5E1C3004AE9AE /* DetailsViewController.swift */,
+				AB5F39A320B5EDD1004AE9AE /* Extensions.swift */,
 			);
 			path = NameList;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			files = (
 				AB57E95820A72D7F0060A213 /* ViewController.swift in Sources */,
 				AB57E95620A72D7F0060A213 /* AppDelegate.swift in Sources */,
+				AB5F39A220B5E1C3004AE9AE /* DetailsViewController.swift in Sources */,
+				AB5F39A420B5EDD1004AE9AE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
