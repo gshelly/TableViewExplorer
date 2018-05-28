@@ -11,27 +11,37 @@ import UIKit
 @IBDesignable
 class RoundableImageView: UIImageView {
     
+    var maskImageView = UIImageView()
+    
     @IBInspectable var cornerRadius : CGFloat = 0.0{
-        didSet{
+        didSet {
             self.applyCornerRadius()
         }
     }
     
     @IBInspectable var borderColor : UIColor = UIColor.clear{
-        didSet{
+        didSet {
             self.applyCornerRadius()
         }
     }
     
     @IBInspectable var borderWidth : Double = 0{
-        didSet{
+        didSet {
             self.applyCornerRadius()
         }
     }
     
     @IBInspectable var circular : Bool = false{
-        didSet{
+        didSet {
             self.applyCornerRadius()
+        }
+    }
+    
+    @IBInspectable var maskImage: UIImage? {
+        didSet {
+            maskImageView.image = maskImage
+            maskImageView.frame = bounds
+            mask = maskImageView
         }
     }
     
@@ -53,7 +63,7 @@ class RoundableImageView: UIImageView {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         applyCornerRadius()
